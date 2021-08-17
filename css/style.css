@@ -84,7 +84,7 @@ body {
 
 .header {
   max-width: 1920px;
-  background-image: url(/img/headerBG.jpg);
+  background-image: url(./img/headerBG.jpg);
   height: 1045px;
   margin: 0 auto;
   position: relative;
@@ -489,35 +489,35 @@ body {
 }
 
 .oskar {
-  background-image: url(/img/sliderBG.png), url(/img/slider1.jpg);
+  background-image: url(./img/sliderBG.png), url(./img/slider1.jpg);
 }
 
 .oskar:hover {
-  background-image: url(/img/slider1.jpg);
+  background-image: url(./img/slider1.jpg);
 }
 
 .goldGate {
-  background-image: url(/img/sliderBG.png), url(/img/slider2.jpg);
+  background-image: url(./img/sliderBG.png), url(./img/slider2.jpg);
 }
 
 .goldGate:hover {
-  background-image: url(/img/slider2.jpg);
+  background-image: url(./img/slider2.jpg);
 }
 
 .goldGram {
-  background-image: url(/img/sliderBG.png), url(/img/slider3.jpg);
+  background-image: url(./img/sliderBG.png), url(./img/slider3.jpg);
 }
 
 .goldGram:hover {
-  background-image: url(/img/slider3.jpg);
+  background-image: url(./img/slider3.jpg);
 }
 
 .perfomance {
-  background-image: url(/img/sliderBG.png), url(/img/slider4.jpg);
+  background-image: url(./img/sliderBG.png), url(./img/slider4.jpg);
 }
 
 .perfomance:hover {
-  background-image: url(/img/slider4.jpg);
+  background-image: url(./img/slider4.jpg);
 }
 
 .rating {
@@ -527,7 +527,7 @@ body {
   position: relative;
   margin-top: 150px;
   height: 550px;
-  background-image: url(/img/ratingBG1.png), url(/img/ratingBG.png);
+  background-image: url(./img/ratingBG1.png), url(./img/ratingBG.png);
   background-position: center;
 }
 
