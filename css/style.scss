@@ -1,43 +1,9 @@
-/*Обнуление*/
-* {
-    margin    : 0;
-    padding   : 0;
-    box-sizing: border-box;
-}
-
-:focus,
-:active {
-    outline: none;
-}
-
-a:focus,
-a:active {
-    outline: none;
-}
-
-button {
-    cursor     : pointer;
-    font-family: inherit;
-    border     : transparent;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
-
-/*----------------------------*/
+@import 'reset';
 
 $main-color : #D1A954;
 $text-family: 'Open Sans';
+
+@import 'formats';
 
 .hover {
     display: none;
@@ -56,7 +22,7 @@ body {
 
 .header {
     max-width          : 1920px;
-    background-image   : url(/img/headerBG.jpg);
+    background-image   : url(../img/headerBG.jpg);
     height             : 1045px;
     margin             : 0 auto;
     position           : relative;
@@ -89,13 +55,9 @@ body {
                 }
 
                 & li>a {
-                    font-style    : normal;
-                    font-weight   : bold;
-                    font-size     : 24px;
-                    line-height   : 33px;
-                    letter-spacing: 0.05em;
-                    text-transform: uppercase;
-                    color         : #FFFFFF;
+                    @extend %text-format;
+                    font-size  : 24px;
+                    line-height: 33px;
                 }
             }
 
@@ -120,13 +82,10 @@ body {
     }
 
     & a {
-        font-style    : normal;
-        font-weight   : bold;
+        @extend %text-format;
         font-size     : 18px;
         line-height   : 25px;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
 
         &:hover {
             border-bottom: 2px solid $main-color;
@@ -135,13 +94,10 @@ body {
 }
 
 .right__nav {
-    font-style    : normal;
-    font-weight   : bold;
-    font-size     : 16px;
-    line-height   : 22px;
-    letter-spacing: 0.05em;
-    color         : #FFFFFF;
-    border-bottom : 2px solid transparent;
+    @extend %text-format;
+    font-size    : 16px;
+    line-height  : 22px;
+    border-bottom: 2px solid transparent;
 
     &:hover {
         border-bottom: 2px solid $main-color;
@@ -168,13 +124,11 @@ body {
 }
 
 .social__text {
-    transform     : rotate(270deg);
-    font-style    : normal;
-    font-weight   : bold;
+    transform: rotate(270deg);
+    @extend %text-format;
     font-size     : 18px;
     line-height   : 25px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
     color         : #C4C4C4;
     width         : max-content;
     margin-bottom : 148px;
@@ -214,44 +168,27 @@ body {
 }
 
 .header__text h1 {
-    font-style    : normal;
-    font-weight   : bold;
+    @extend %text-format;
     font-size     : 64px;
     line-height   : 51px;
     padding-top   : 17px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color         : #FFFFFF;
     margin-bottom : 50px;
 }
 
 .header__text p {
-    font-family  : $text-family;
-    font-style   : normal;
-    font-weight  : normal;
-    font-size    : 14px;
-    line-height  : 20px;
-    color        : #FFFFFF;
-    margin-bottom: 49px;
+    @extend %p-format;
+    font-size     : 14px;
+    line-height   : 20px;
+    margin-bottom : 49px;
+    letter-spacing: 0.1em;
 }
 
 .afisha__button {
-    background-color: $main-color;
-    text-transform  : uppercase;
-    font-style      : normal;
-    font-weight     : bold;
-    font-size       : 18px;
-    line-height     : 25px;
-    letter-spacing  : 0.1em;
-    color           : #FFFFFF;
-    padding         : 13px 47px;
-    text-align      : center;
-    display         : inline-block;
-
-    &:hover {
-        transition: all 0.2s;
-        box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.2);
-    }
+    @extend %btn-format;
+    padding   : 13px 47px;
+    text-align: center;
+    display   : inline-block;
 }
 
 .header__slider {
@@ -302,16 +239,14 @@ body {
 }
 
 .about h2 {
-    margin-top    : 150px;
-    margin-bottom : 100px;
+    margin-top   : 150px;
+    margin-bottom: 100px;
+    @extend %text-format;
     text-align    : center;
-    font-style    : normal;
     font-weight   : 300;
     font-size     : 48px;
     line-height   : 65px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color         : #FFFFFF;
 
     & span {
         color: $main-color;
@@ -326,12 +261,9 @@ body {
         max-width: 445px;
 
         & p {
-            font-family: $text-family;
-            font-style : normal;
-            font-weight: normal;
+            @extend %p-format;
             font-size  : 14px;
             line-height: 21px;
-            color      : #FFFFFF;
         }
     }
 
@@ -365,13 +297,10 @@ body {
     }
 
     & h4 {
-        font-style    : normal;
-        font-weight   : bold;
+        @extend %text-format;
         font-size     : 21px;
         line-height   : 27px;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
         margin-bottom : 35px;
     }
 
@@ -385,16 +314,14 @@ body {
     margin   : 0 auto;
 
     & h2 {
-        margin-top    : 150px;
-        margin-bottom : 100px;
-        font-style    : normal;
+        margin-top   : 150px;
+        margin-bottom: 100px;
+        @extend %text-format;
         font-weight   : 300;
         font-size     : 48px;
         line-height   : 65px;
         text-align    : center;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
 
         & span {
             color: $main-color;
@@ -405,6 +332,7 @@ body {
 .swiper-container {
     height     : 100%;
     margin-left: 150px;
+    overflow   : hidden;
 }
 
 .swiper-slide {
@@ -440,27 +368,20 @@ body {
     }
 
     &-tag {
-        font-style    : normal;
-        font-weight   : bold;
-        font-size     : 24px;
-        line-height   : 33px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
-        top           : 40px;
-        left          : 40px;
+        @extend %text-format;
+        font-size  : 24px;
+        line-height: 33px;
+        top        : 40px;
+        left       : 40px;
     }
 
     &-month {
-        text-align    : left;
-        width         : 131px;
-        font-style    : normal;
-        font-weight   : bold;
+        text-align: left;
+        width     : 131px;
+        @extend %text-format;
         font-size     : 18px;
         line-height   : 25px;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
         transform     : rotate(-90deg);
         left          : -13px;
         bottom        : 95px;
@@ -468,37 +389,37 @@ body {
 }
 
 .oskar {
-    background-image: url(/img/sliderBG.png), url(/img/slider1.jpg);
+    background-image: url(../img/sliderBG.png), url(../img/slider1.jpg);
 
     &:hover {
-        background-image: url(/img/slider1.jpg);
+        background-image: url(../img/slider1.jpg);
     }
 }
 
 .goldGate {
-    background-image: url(/img/sliderBG.png),
-        url(/img/slider2.jpg);
+    background-image: url(../img/sliderBG.png),
+        url(../img/slider2.jpg);
 
     &:hover {
-        background-image: url(/img/slider2.jpg);
+        background-image: url(../img/slider2.jpg);
     }
 }
 
 .goldGram {
-    background-image: url(/img/sliderBG.png),
-        url(/img/slider3.jpg);
+    background-image: url(../img/sliderBG.png),
+        url(../img/slider3.jpg);
 
     &:hover {
-        background-image: url(/img/slider3.jpg);
+        background-image: url(../img/slider3.jpg);
     }
 }
 
 .perfomance {
-    background-image: url(/img/sliderBG.png),
-        url(/img/slider4.jpg);
+    background-image: url(../img/sliderBG.png),
+        url(../img/slider4.jpg);
 
     &:hover {
-        background-image: url(/img/slider4.jpg);
+        background-image: url(../img/slider4.jpg);
     }
 }
 
@@ -507,7 +428,7 @@ body {
     position           : relative;
     margin-top         : 150px;
     height             : 550px;
-    background-image   : url(/img/ratingBG1.png), url(/img/ratingBG.png);
+    background-image   : url(../img/ratingBG1.png), url(../img/ratingBG.png);
     background-position: center;
 
     &__year {
@@ -541,14 +462,12 @@ body {
     }
 
     &__text {
-        position   : absolute;
-        max-width  : 540px;
-        font-family: $text-family;
-        font-style : normal;
+        position : absolute;
+        max-width: 540px;
+        @extend %p-format;
         font-weight: bold;
         font-size  : 36px;
         line-height: 54px;
-        color      : #FFFFFF;
         top        : 220px;
         left       : 475px;
     }
@@ -561,14 +480,12 @@ body {
     overflow  : hidden;
 
     & h2 {
-        font-style    : normal;
+        @extend %text-format;
         font-weight   : 300;
         font-size     : 48px;
         line-height   : 65px;
         text-align    : center;
         letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color         : #FFFFFF;
 
         & span {
             color: $main-color;
@@ -599,14 +516,12 @@ body {
 }
 
 .contacts__header {
-    font-style    : normal;
+    @extend %text-format;
     font-weight   : 300;
     font-size     : 48px;
     line-height   : 65px;
     text-align    : center;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color         : #FFFFFF;
     margin-top    : 120px;
     margin-bottom : 100px;
 
@@ -622,8 +537,6 @@ body {
     &__phone-email {
         display       : flex;
         flex-direction: column;
-
-
     }
 
     &__phone {
@@ -632,14 +545,10 @@ body {
         width         : fit-content;
 
         & a {
-            font-style    : normal;
-            font-weight   : bold;
-            font-size     : 16px;
-            line-height   : 22px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color         : #FFFFFF;
-            border-bottom : 2px solid transparent;
+            @extend %text-format;
+            font-size    : 16px;
+            line-height  : 22px;
+            border-bottom: 2px solid transparent;
 
             &:hover {
                 border-bottom: 2px solid $main-color;
@@ -657,16 +566,12 @@ body {
 
 
         & a {
-            width         : fit-content;
-            margin-top    : 25px;
-            font-style    : normal;
-            font-weight   : bold;
-            font-size     : 16px;
-            line-height   : 22px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color         : #FFFFFF;
-            border-bottom : 2px solid transparent;
+            width     : fit-content;
+            margin-top: 25px;
+            @extend %text-format;
+            font-size    : 16px;
+            line-height  : 22px;
+            border-bottom: 2px solid transparent;
 
             &:hover {
                 border-bottom: 2px solid $main-color;
@@ -765,21 +670,9 @@ body {
             }
 
             & button {
-                width           : 190px;
-                height          : 50px;
-                font-style      : normal;
-                font-weight     : bold;
-                font-size       : 18px;
-                line-height     : 25px;
-                letter-spacing  : 0.1em;
-                text-transform  : uppercase;
-                color           : #FFFFFF;
-                background-color: $main-color;
-
-                &:hover {
-                    transition: all 0.2s;
-                    box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.2);
-                }
+                width : 190px;
+                height: 50px;
+                @extend %btn-format;
             }
         }
     }
@@ -792,12 +685,10 @@ body {
     border-top     : 1px solid #565656;
     display        : flex;
     justify-content: space-between;
-    font-family    : $text-family;
-    font-style     : normal;
-    font-weight    : normal;
-    font-size      : 12px;
-    line-height    : 18px;
-    color          : #989898;
+    @extend %p-format;
+    font-size  : 12px;
+    line-height: 18px;
+    color      : #989898;
 }
 
 @media (max-width: 1410px) {
@@ -953,26 +844,19 @@ body {
 
     .header__text {
         margin-top: 169px;
-    }
 
-    .header__text h1 {
-        padding-top: 0;
-    }
-
-    .rating__year {
-        left: 100px;
-    }
-
-    .rating__stars {
-        left: 280px;
-    }
-
-    .rating__text {
-        left: 280px;
+        & h1 {
+            padding-top: 0;
+        }
     }
 
     .projects {
         max-width: 690px;
+
+        & h2 {
+            margin-top   : 90px;
+            margin-bottom: 60px;
+        }
     }
 
     .swiper-container {
@@ -984,13 +868,20 @@ body {
         margin-bottom: 60px;
     }
 
-    .projects h2 {
-        margin-top   : 90px;
-        margin-bottom: 60px;
-    }
-
     .rating {
         margin: 90px auto;
+
+        &__year {
+            left: 100px;
+        }
+
+        &__stars {
+            left: 280px;
+        }
+
+        &__text {
+            left: 280px;
+        }
     }
 
     .footer {
@@ -1011,6 +902,10 @@ body {
     .projects {
         margin-left : 33px;
         margin-right: 33px;
+
+        & h2 {
+            margin-top: 80px;
+        }
     }
 
     .rating__year {
@@ -1045,14 +940,10 @@ body {
                 justify-content: space-around;
             }
         }
-    }
 
-    .about__theater__text {
-        text-align: center;
-    }
-
-    .projects h2 {
-        margin-top: 80px;
+        &__text {
+            text-align: center;
+        }
     }
 
     .contacts__form__top {
@@ -1060,8 +951,15 @@ body {
         align-items   : center;
 
         & textarea {
+            width      : 100%;
+            height     : 100px;
             margin-left: 0;
             margin-top : 30px;
+        }
+
+        &-grid {
+            width                : 100%;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -1084,10 +982,10 @@ body {
     .header__text {
         max-width: 510px;
         margin   : 169px 33px 0;
-    }
 
-    .header__text h1 {
-        font-size: 55px;
+        & h1 {
+            font-size: 55px;
+        }
     }
 
     .header__nav .left__menu {
